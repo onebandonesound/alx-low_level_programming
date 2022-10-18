@@ -1,31 +1,32 @@
 /*
  * File: 100-print_comb3.c
- * Auth : Wale
+ * Auth: Wale
  */
 
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Avoid: parameter
- * Return: 0 (success)
+ * main - prints two diferent digits
+ *
+ * Return: Always 0.
  */
 
 int main(void)
 {
-	int i;
-	int j;
+	int digit1, digit2;
 
-	for (i = 48; i < 58; i++)
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		putchar(i);
-		putchar(j);
-		if (i != 56 && j != 58)
+		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
 		{
-			putchar(44);
-			putchar(32);
+			putchar((digit1 % 10) + '0');
+			putchar((digit2 % 10) + '0');
+			if (digit1 == 8 && digit2 == 9)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
-	putchar(10);
+	putchar('\n');
 	return (0);
 }
