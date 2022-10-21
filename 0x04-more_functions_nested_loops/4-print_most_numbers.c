@@ -3,7 +3,7 @@
  * print_most_numbers - print numbers
  * Return: always 0 success
  */
-void print_most_numbers(void);
+void print_most_numbers(void)
 {
 	int c = 0;
 
@@ -12,5 +12,5 @@ void print_most_numbers(void);
 		if (c != 2 && c != 4)
 			_putchar(c + 48);
 	}
-	_putchar("\n")
+	_putchar('\n');
 }
