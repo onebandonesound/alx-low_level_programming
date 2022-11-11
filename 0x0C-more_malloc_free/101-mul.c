@@ -37,6 +37,14 @@ int _strlen(char *s)
 	return (i);
 }
 /**
+ * errors - handles errors to main
+ */
+void errors(void)
+{
+	printf("Error\n");
+	exit(98);
+}
+/**
  * main - multiplies two positive numbers
  * @argc: number of arguments
  *  @argv: array of arguments
